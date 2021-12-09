@@ -10,18 +10,17 @@
 		4150D6FB6D4851C5F7B0650C /* libPods-TestWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C351747040B4FABE67C1B6 /* libPods-TestWallet.a */; };
 		4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783A275CAACF00764B7D /* AppDelegate.swift */; };
 		4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783C275CAACF00764B7D /* SceneDelegate.swift */; };
-		4314783F275CAACF00764B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783E275CAACF00764B7D /* ViewController.swift */; };
+		4314783F275CAACF00764B7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783E275CAACF00764B7D /* MainViewController.swift */; };
 		43147842275CAACF00764B7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43147840275CAACF00764B7D /* Main.storyboard */; };
 		43147845275CAACF00764B7D /* TestWallet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43147843275CAACF00764B7D /* TestWallet.xcdatamodeld */; };
 		43147847275CAAD000764B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43147846275CAAD000764B7D /* Assets.xcassets */; };
 		43147855275CAAD000764B7D /* TestWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43147854275CAAD000764B7D /* TestWalletTests.swift */; };
 		4314785F275CAAD000764B7D /* TestWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314785E275CAAD000764B7D /* TestWalletUITests.swift */; };
 		43147861275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43147860275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift */; };
-		4314786E275CD70F00764B7D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4314786D275CD70F00764B7D /* Podfile */; };
 		43147870275D0D9200764B7D /* CoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314786F275D0D9200764B7D /* CoreClient.swift */; };
 		43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43147877275D219800764B7D /* LaunchScreen.storyboard */; };
 		4314787B275D227F00764B7D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787A275D227F00764B7D /* Service.swift */; };
-		4314787D275D2A3600764B7D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* Presenter.swift */; };
+		4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* MainPresenter.swift */; };
 		43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */; };
 		43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +48,7 @@
 		43147837275CAACF00764B7D /* TestWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4314783A275CAACF00764B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4314783C275CAACF00764B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4314783E275CAACF00764B7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4314783E275CAACF00764B7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		43147841275CAACF00764B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43147844275CAACF00764B7D /* TestWallet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestWallet.xcdatamodel; sourceTree = "<group>"; };
 		43147846275CAAD000764B7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,11 +58,10 @@
 		4314785A275CAAD000764B7D /* TestWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4314785E275CAAD000764B7D /* TestWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWalletUITests.swift; sourceTree = "<group>"; };
 		43147860275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4314786D275CD70F00764B7D /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		4314786F275D0D9200764B7D /* CoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreClient.swift; sourceTree = "<group>"; };
 		43147878275D219800764B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Wooppay Wallet/Wooppay Wallet/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		4314787A275D227F00764B7D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		4314787C275D2A3600764B7D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		4314787C275D2A3600764B7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
 		43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
 		C68980DC08EE45726C7DFD8E /* Pods-TestWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWallet.release.xcconfig"; path = "Target Support Files/Pods-TestWallet/Pods-TestWallet.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		4314782E275CAACF00764B7D = {
 			isa = PBXGroup;
 			children = (
-				4314786D275CD70F00764B7D /* Podfile */,
 				43147839275CAACF00764B7D /* TestWallet */,
 				43147853275CAAD000764B7D /* TestWalletTests */,
 				4314785D275CAAD000764B7D /* TestWalletUITests */,
@@ -121,17 +118,9 @@
 		43147839275CAACF00764B7D /* TestWallet */ = {
 			isa = PBXGroup;
 			children = (
-				43147873275D0DC600764B7D /* MVP */,
-				43147871275D0D9700764B7D /* Clients */,
-				4314783A275CAACF00764B7D /* AppDelegate.swift */,
-				4314783C275CAACF00764B7D /* SceneDelegate.swift */,
-				43147840275CAACF00764B7D /* Main.storyboard */,
-				43147846275CAAD000764B7D /* Assets.xcassets */,
+				43ED4AD1276060CF0066DC74 /* Resources */,
+				43ED4ACF276060470066DC74 /* Modules */,
 				4314784B275CAAD000764B7D /* Info.plist */,
-				43147877275D219800764B7D /* LaunchScreen.storyboard */,
-				43147843275CAACF00764B7D /* TestWallet.xcdatamodeld */,
-				43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */,
-				43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */,
 			);
 			path = TestWallet;
 			sourceTree = "<group>";
@@ -153,54 +142,102 @@
 			path = TestWalletUITests;
 			sourceTree = "<group>";
 		};
-		43147871275D0D9700764B7D /* Clients */ = {
+		43ED4ACF276060470066DC74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				43147872275D0DAA00764B7D /* CoreClient */,
+				43ED4AD0276060500066DC74 /* Main */,
 			);
-			path = Clients;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		43147872275D0DAA00764B7D /* CoreClient */ = {
+		43ED4AD0276060500066DC74 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4314786F275D0D9200764B7D /* CoreClient.swift */,
+				4314783E275CAACF00764B7D /* MainViewController.swift */,
+				4314787C275D2A3600764B7D /* MainPresenter.swift */,
 			);
-			path = CoreClient;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		43147873275D0DC600764B7D /* MVP */ = {
+		43ED4AD1276060CF0066DC74 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				43147876275D1CCD00764B7D /* Presenters */,
-				43147875275D0DD900764B7D /* Views */,
-				43147874275D0DD000764B7D /* Models */,
+				43ED4AD9276066C10066DC74 /* DataBase */,
+				43ED4AD8276066950066DC74 /* Sources */,
+				43ED4AD7276066870066DC74 /* Storyboards */,
+				43ED4AD62760667E0066DC74 /* App */,
+				43ED4AD42760666B0066DC74 /* Components */,
+				43ED4AD3276060FF0066DC74 /* Network */,
 			);
-			path = MVP;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		43147874275D0DD000764B7D /* Models */ = {
+		43ED4AD2276060DD0066DC74 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
 				4314787A275D227F00764B7D /* Service.swift */,
 			);
-			path = Models;
+			path = DTO;
 			sourceTree = "<group>";
 		};
-		43147875275D0DD900764B7D /* Views */ = {
+		43ED4AD3276060FF0066DC74 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				4314783E275CAACF00764B7D /* ViewController.swift */,
+				4314786F275D0D9200764B7D /* CoreClient.swift */,
+				43ED4AD2276060DD0066DC74 /* DTO */,
 			);
-			path = Views;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		43147876275D1CCD00764B7D /* Presenters */ = {
+		43ED4AD42760666B0066DC74 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4314787C275D2A3600764B7D /* Presenter.swift */,
+				43ED4AD5276066730066DC74 /* Search */,
 			);
-			path = Presenters;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		43ED4AD5276066730066DC74 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */,
+				43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		43ED4AD62760667E0066DC74 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4314783A275CAACF00764B7D /* AppDelegate.swift */,
+				4314783C275CAACF00764B7D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		43ED4AD7276066870066DC74 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				43147840275CAACF00764B7D /* Main.storyboard */,
+				43147877275D219800764B7D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		43ED4AD8276066950066DC74 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				43147846275CAAD000764B7D /* Assets.xcassets */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		43ED4AD9276066C10066DC74 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				43147843275CAACF00764B7D /* TestWallet.xcdatamodeld */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		A00A9D56849113036768CA81 /* Pods */ = {
@@ -328,7 +365,6 @@
 				43147847275CAAD000764B7D /* Assets.xcassets in Resources */,
 				43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */,
 				43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */,
-				4314786E275CD70F00764B7D /* Podfile in Resources */,
 				43147842275CAACF00764B7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,8 +416,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43147845275CAACF00764B7D /* TestWallet.xcdatamodeld in Sources */,
-				4314787D275D2A3600764B7D /* Presenter.swift in Sources */,
-				4314783F275CAACF00764B7D /* ViewController.swift in Sources */,
+				4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */,
+				4314783F275CAACF00764B7D /* MainViewController.swift in Sources */,
 				4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */,
 				4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */,
 				43147870275D0D9200764B7D /* CoreClient.swift in Sources */,

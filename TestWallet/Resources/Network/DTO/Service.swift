@@ -27,7 +27,4 @@ struct Service: Codable {
     let blacklist: Bool
     let country_code: Int
     let picture_url: String
-  
-    
-    
 }

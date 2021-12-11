@@ -11,11 +11,11 @@ class ViewController: UIViewController {
 
     private var presenter: MainPresenter? = MainPresenter()
     
-    lazy var label: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 24)
-        return label
-    }()
+//    lazy var label: UILabel = {
+//        let label = UILabel()
+//        label.font = .systemFont(ofSize: 24)
+//        return label
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +25,13 @@ class ViewController: UIViewController {
     func configure() {
         presenter?.output = self
         
-        label.text = presenter?.getUserName()
+//        label.text = presenter?.getUserName()
         
     }
     
-    func touchButtonAction(){
-        presenter?.auth(login: "", password: "")
-    }
+//    func touchButtonAction(){
+//        presenter?.auth(login: "", password: "")
+//    }
 }
 
 // MARK: - MainPresenterpOutput

@@ -36,6 +36,22 @@ final class CoreClient {
             
         }
     }
+    
+    func services<T>( success: ((T) -> ())? = nil,
+                      error: Any?) where T: Decodable {
+        
+        let request = AF.request(Urls.base + "/service",
+                                 method: .get)
+        
+//        request.responseDecodable { (response: AFDataResponse<T>) in
+////            print(response)
+//        }
+        
+        request.responseDecodable(of: [Service].self) { response in
+            
+        }
+        
+    }
 }
 
 private extension CoreClient {

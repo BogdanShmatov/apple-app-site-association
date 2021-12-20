@@ -13,7 +13,7 @@ enum Urls {
 
 final class CoreClient {
     
-    typealias CoreResponse = ([[String: Any]]?, Error?) -> Void
+    typealias CoreResponse = ([Service]?, Error?) -> Void
     
     func auth<T>(login: String,
                  password: String,
@@ -37,20 +37,33 @@ final class CoreClient {
         }
     }
     
-    func services<T>( success: ((T) -> ())? = nil,
-                      error: Any?) where T: Decodable {
-        
-        let request = AF.request(Urls.base + "/service",
-                                 method: .get)
-        
-//        request.responseDecodable { (response: AFDataResponse<T>) in
-////            print(response)
+//    func services<T>( success: ((T) -> ())? = nil,
+//                      error: Any?) where T: Decodable {
+//
+//        let request = AF.request(Urls.base + "/service",
+//                                 method: .get)
+//
+////        request.responseDecodable { (response: AFDataResponse<T>) in
+//////            print(response)
+////        }
+//
+//        request.responseDecodable(of: [Service].self) { response in
+//            if let response = response {
+//                success?(response as! T)
+//            }
 //        }
+//
+//    }
+    func services(_ success: @escaping CoreResponse) {
         
-        request.responseDecodable(of: [Service].self) { response in
-            
-        }
+        let request = AF.request(Urls.base + "/service", method: .get)
         
+                request.responseDecodable(of: [Service].self) { response in
+                    if let response = response.value  {
+                        success(response, nil)
+//                        print(response)
+                    }
+                }
     }
 }
 

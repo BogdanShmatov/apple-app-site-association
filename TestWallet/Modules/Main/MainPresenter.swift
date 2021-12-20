@@ -15,7 +15,7 @@ protocol MainPresenterInput {
 
 protocol MainPresenterpOutput: AnyObject {
     func onSuccessLogin()
-    func onSuccessService(data: Service)
+    func onSuccessService(data: [Service])
 }
 
 final class MainPresenter {
@@ -40,12 +40,19 @@ extension MainPresenter: MainPresenterInput {
         }, error: nil)
     }
     
+//    func services() {
+//        requestManager.services(success: { (result: Service) in
+//            self.output?.onSuccessService(data: result)
+//            print(result)
+//        }, error: nil)
+//
+//    }
     func services() {
-        requestManager.services(success: { (result: Service) in
-            self.output?.onSuccessService(data: result)
-            print(result)
-        }, error: nil)
-        
+        requestManager.services() { (response, error) in
+            if let response = response {
+                self.output?.onSuccessService(data: response)
+            }
+        }
     }
 }
 

@@ -28,8 +28,8 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="12"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Погашение кредитов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpi-hb-ocN">
-                        <rect key="frame" x="78" y="20" width="161" height="24"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Погашение кредитов" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpi-hb-ocN">
+                        <rect key="frame" x="78" y="20" width="277" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -41,6 +41,7 @@
                     <constraint firstItem="TAQ-RS-Lff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="TOr-LU-YBX"/>
                     <constraint firstItem="TAQ-RS-Lff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="enE-oG-OWc"/>
                     <constraint firstItem="hpi-hb-ocN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="fuE-HQ-ehh"/>
+                    <constraint firstAttribute="trailing" secondItem="hpi-hb-ocN" secondAttribute="trailing" constant="10" id="neA-c3-9uG"/>
                     <constraint firstAttribute="bottom" secondItem="hpi-hb-ocN" secondAttribute="bottom" constant="20" id="poM-BE-1fT"/>
                 </constraints>
             </tableViewCellContentView>

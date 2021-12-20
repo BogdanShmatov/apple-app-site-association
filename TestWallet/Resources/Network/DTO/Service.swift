@@ -9,8 +9,8 @@ import Foundation
 
 struct Service: Decodable {
     
-    let id: Int?
-    let name: String?
+    let id: Int
+//    let name: String?
 //    let parent_id: Int
     let title: String
 //    let description: String
@@ -26,5 +26,5 @@ struct Service: Decodable {
 //    let updated_at: String
 //    let blacklist: Bool
 //    let country_code: Int?
-    let picture_url: String?
+//    let picture_url: String?
 }

@@ -23,10 +23,8 @@
 		4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* MainPresenter.swift */; };
 		43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */; };
 		43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */; };
-		43FF3018276685BC00E31B5E /* ServiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF3016276685BC00E31B5E /* ServiceCollectionViewCell.swift */; };
-		43FF3019276685BC00E31B5E /* ServiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF3017276685BC00E31B5E /* ServiceCollectionViewCell.xib */; };
-		43FF301C27668BFF00E31B5E /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF301A27668BFF00E31B5E /* ServiceTableViewCell.swift */; };
-		43FF301D27668BFF00E31B5E /* ServiceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF301B27668BFF00E31B5E /* ServiceTableViewCell.xib */; };
+		43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */; };
+		43FF301D27668BFF00E31B5E /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43FF301B27668BFF00E31B5E /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +66,8 @@
 		4314787C275D2A3600764B7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
 		43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
-		43FF3016276685BC00E31B5E /* ServiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollectionViewCell.swift; sourceTree = "<group>"; };
-		43FF3017276685BC00E31B5E /* ServiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCollectionViewCell.xib; sourceTree = "<group>"; };
-		43FF301A27668BFF00E31B5E /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
-		43FF301B27668BFF00E31B5E /* ServiceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceTableViewCell.xib; sourceTree = "<group>"; };
+		43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		43FF301B27668BFF00E31B5E /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		C68980DC08EE45726C7DFD8E /* Pods-TestWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWallet.release.xcconfig"; path = "Target Support Files/Pods-TestWallet/Pods-TestWallet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,10 +248,8 @@
 		43FF30152766858500E31B5E /* Collections */ = {
 			isa = PBXGroup;
 			children = (
-				43FF3016276685BC00E31B5E /* ServiceCollectionViewCell.swift */,
-				43FF3017276685BC00E31B5E /* ServiceCollectionViewCell.xib */,
-				43FF301A27668BFF00E31B5E /* ServiceTableViewCell.swift */,
-				43FF301B27668BFF00E31B5E /* ServiceTableViewCell.xib */,
+				43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */,
+				43FF301B27668BFF00E31B5E /* CategoryCollectionViewCell.xib */,
 			);
 			path = Collections;
 			sourceTree = "<group>";
@@ -385,9 +379,8 @@
 				43147847275CAAD000764B7D /* Assets.xcassets in Resources */,
 				43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */,
 				43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */,
-				43FF301D27668BFF00E31B5E /* ServiceTableViewCell.xib in Resources */,
+				43FF301D27668BFF00E31B5E /* CategoryCollectionViewCell.xib in Resources */,
 				43147842275CAACF00764B7D /* Main.storyboard in Resources */,
-				43FF3019276685BC00E31B5E /* ServiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +434,9 @@
 				4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */,
 				4314783F275CAACF00764B7D /* MainViewController.swift in Sources */,
 				4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */,
-				43FF3018276685BC00E31B5E /* ServiceCollectionViewCell.swift in Sources */,
 				4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */,
 				43147870275D0D9200764B7D /* CoreClient.swift in Sources */,
-				43FF301C27668BFF00E31B5E /* ServiceTableViewCell.swift in Sources */,
+				43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */,
 				4314787B275D227F00764B7D /* Service.swift in Sources */,
 				43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */,
 			);

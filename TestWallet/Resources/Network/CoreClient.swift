@@ -15,80 +15,15 @@ final class CoreClient {
     
     typealias CoreResponse = ([Service]?, Error?) -> Void
     
-    func auth<T>(login: String,
-                 password: String,
-                 success: ((T) -> ())? = nil,
-                 error: Any?) where T: Decodable {
-        
-        let parametrs = [
-            "login":login,
-            "password":password
-        ]
-        let headers: HTTPHeaders = [
-            "":""
-        ]
-        let request = AF.request(Urls.base + "/auth",
-                                 method: .post,
-                                 parameters: parametrs,
-                                 headers: headers)
-        
-        request.responseDecodable { (response: AFDataResponse<T>) in
-            
-        }
-    }
-    
-//    func services<T>( success: ((T) -> ())? = nil,
-//                      error: Any?) where T: Decodable {
-//
-//        let request = AF.request(Urls.base + "/service",
-//                                 method: .get)
-//
-////        request.responseDecodable { (response: AFDataResponse<T>) in
-//////            print(response)
-////        }
-//
-//        request.responseDecodable(of: [Service].self) { response in
-//            if let response = response {
-//                success?(response as! T)
-//            }
-//        }
-//
-//    }
     func services(_ success: @escaping CoreResponse) {
         
         let request = AF.request(Urls.base + "/service", method: .get)
         
-                request.responseDecodable(of: [Service].self) { response in
-                    if let response = response.value  {
-                        success(response, nil)
-//                        print(response)
-                    }
+            request.responseDecodable(of: [Service].self) { response in
+                
+                if let response = response.value  {
+                    success(response, nil)
                 }
+        }
     }
-}
-
-private extension CoreClient {
-//
-//    func send(
-//        _ url: String,
-//        method: HTTPMethod = .get,
-//        parameters: [String: String]? = nil,
-//        encoder: ParameterEncoder = URLEncodedFormParameterEncoder.default,
-//        headers: HTTPHeaders? = nil,
-//        completion: @escaping CoreResponse) {
-//
-//         AF.request(
-//            self.baseUrl + url,
-//            method: method,
-//            parameters: parameters,
-//            encoder: encoder,
-//            headers: headers).responseJSON { response in
-//
-//                 if let error = response.error {
-//                     completion(nil, error)
-//                 } else if let jsonArray = response.value as? [[String: Any]] {
-//                     completion(jsonArray, nil)
-//                 }
-//         }
-//    }
 }

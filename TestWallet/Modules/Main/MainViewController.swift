@@ -9,13 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var servicesCollectionView: UICollectionView!
+    @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     private var presenter: MainPresenter? = MainPresenter()
     
     var services = [Service]()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         configure()
     }
@@ -28,12 +29,12 @@ class ViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: servicesCollectionView.frame.width, height: 60)
+        layout.itemSize = CGSize(width: categoryCollectionView.frame.width, height: 60)
         
-        servicesCollectionView.collectionViewLayout = layout
-        servicesCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
-        servicesCollectionView.dataSource = self
-        servicesCollectionView.delegate = self
+        categoryCollectionView.collectionViewLayout = layout
+        categoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
+        categoryCollectionView.dataSource = self
+        categoryCollectionView.delegate = self
         
     }
 
@@ -48,7 +49,7 @@ extension ViewController: MainPresenterpOutput {
     
     func onSuccessService(data: [Service]) {
         services = data
-        servicesCollectionView.reloadData()
+        categoryCollectionView.reloadData()
     }
     
 }
@@ -68,6 +69,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
     }
 }

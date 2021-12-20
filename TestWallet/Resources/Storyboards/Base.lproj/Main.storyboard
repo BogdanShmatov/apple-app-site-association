@@ -89,7 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="servicesCollectionView" destination="fNe-kc-cLM" id="Tsk-iD-NVO"/>
+                        <outlet property="categoryCollectionView" destination="fNe-kc-cLM" id="s2g-oo-y5e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

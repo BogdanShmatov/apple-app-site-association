@@ -21,6 +21,8 @@
 		43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43147877275D219800764B7D /* LaunchScreen.storyboard */; };
 		4314787B275D227F00764B7D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787A275D227F00764B7D /* Service.swift */; };
 		4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* MainPresenter.swift */; };
+		4323203F277B673200AF0645 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323203D277B673200AF0645 /* AuthViewController.swift */; };
+		43232040277B673200AF0645 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4323203E277B673200AF0645 /* AuthViewController.xib */; };
 		43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */; };
 		43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */; };
 		43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */; };
@@ -64,6 +66,8 @@
 		43147878275D219800764B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Wooppay Wallet/Wooppay Wallet/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		4314787A275D227F00764B7D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4314787C275D2A3600764B7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		4323203D277B673200AF0645 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		4323203E277B673200AF0645 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
 		43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
 		43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				43FF30152766858500E31B5E /* Collections */,
 				4314783E275CAACF00764B7D /* MainViewController.swift */,
 				4314787C275D2A3600764B7D /* MainPresenter.swift */,
+				4323203D277B673200AF0645 /* AuthViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 		43ED4AD7276066870066DC74 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				4323203E277B673200AF0645 /* AuthViewController.xib */,
 				43147840275CAACF00764B7D /* Main.storyboard */,
 				43147877275D219800764B7D /* LaunchScreen.storyboard */,
 			);
@@ -380,6 +386,7 @@
 				43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */,
 				43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */,
 				43FF301D27668BFF00E31B5E /* CategoryCollectionViewCell.xib in Resources */,
+				43232040277B673200AF0645 /* AuthViewController.xib in Resources */,
 				43147842275CAACF00764B7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +439,7 @@
 			files = (
 				43147845275CAACF00764B7D /* TestWallet.xcdatamodeld in Sources */,
 				4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */,
+				4323203F277B673200AF0645 /* AuthViewController.swift in Sources */,
 				4314783F275CAACF00764B7D /* MainViewController.swift in Sources */,
 				4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */,
 				4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */,

@@ -21,6 +21,9 @@
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-iy-9g7">
                         <rect key="frame" x="0.0" y="10" width="48" height="48"/>
@@ -32,6 +35,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="12"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
@@ -43,8 +47,14 @@
                     <constraint firstAttribute="bottom" secondItem="diS-bE-sS8" secondAttribute="bottom" constant="16" id="aER-lV-JXx"/>
                     <constraint firstItem="diS-bE-sS8" firstAttribute="leading" secondItem="YFF-iy-9g7" secondAttribute="trailing" constant="30" id="tQx-Zm-5lp"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </collectionViewCellContentView>
             <size key="customSize" width="364" height="69"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="serviceImage" destination="YFF-iy-9g7" id="Cmv-8s-0Xf"/>
                 <outlet property="serviceTitle" destination="diS-bE-sS8" id="rif-5W-IBg"/>

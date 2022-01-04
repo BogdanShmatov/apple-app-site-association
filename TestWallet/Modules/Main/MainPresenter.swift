@@ -8,26 +8,27 @@
 import Foundation
 
 protocol MainPresenterInput {
-    func services()
+    func getCategories()
 }
 
 protocol MainPresenterpOutput: AnyObject {
-    func onSuccessService(data: [Service])
+    func onSuccessCategories(data: [Category])
 }
 
 final class MainPresenter {
     
     fileprivate let requestManager = CoreClient()
+    fileprivate let coreData = CoreDataHendler()
     
     weak var output: MainPresenterpOutput?
 }
 
 extension MainPresenter: MainPresenterInput {
     
-    func services() {
+    func getCategories() {
         requestManager.services() { (response, error) in
-            if let response = response {
-                self.output?.onSuccessService(data: response)
+            if let response = response  {
+                self.output?.onSuccessCategories(data: response)
             }
         }
     }

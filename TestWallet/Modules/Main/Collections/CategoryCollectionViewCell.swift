@@ -17,7 +17,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func setupCell(service: Service) {
-        self.serviceTitle.text = service.title
+    func setupCell(_ category: Category) {
+        serviceTitle.text = category.title
     }
 }

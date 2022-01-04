@@ -13,17 +13,22 @@ enum Urls {
 
 final class CoreClient {
     
-    typealias CoreResponse = ([Service]?, Error?) -> Void
+    typealias CoreResponse = ([Category]?, Error?) -> Void
+    fileprivate let coreData = CoreDataHendler()
     
     func services(_ success: @escaping CoreResponse) {
-        
-        let request = AF.request(Urls.base + "/service", method: .get)
-        
-            request.responseDecodable(of: [Service].self) { response in
-                
-                if let response = response.value  {
-                    success(response, nil)
-                }
+        let categories = coreData.fetch(Category.self)
+        if categories.count != 0 {
+            success(categories, nil)
+        } else {
+            let request = AF.request(Urls.base + "/service", method: .get)
+                request.responseDecodable(of: [CategoryModel].self) { response in
+                    if let response = response.value  {
+                        response.forEach{$0.store()}
+                        let categories = self.coreData.fetch(Category.self)
+                        success(categories, nil)
+                    }
+            }
         }
     }
 }

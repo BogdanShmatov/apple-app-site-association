@@ -19,10 +19,12 @@
 		43147861275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43147860275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift */; };
 		43147870275D0D9200764B7D /* CoreClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314786F275D0D9200764B7D /* CoreClient.swift */; };
 		43147879275D219800764B7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43147877275D219800764B7D /* LaunchScreen.storyboard */; };
-		4314787B275D227F00764B7D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787A275D227F00764B7D /* Service.swift */; };
 		4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* MainPresenter.swift */; };
 		4323203F277B673200AF0645 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323203D277B673200AF0645 /* AuthViewController.swift */; };
 		43232040277B673200AF0645 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4323203E277B673200AF0645 /* AuthViewController.xib */; };
+		434974FE27843E3000C1B865 /* CoreDataHendler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434974FD27843E3000C1B865 /* CoreDataHendler.swift */; };
+		43497501278469FB00C1B865 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43497500278469FB00C1B865 /* CategoryModel.swift */; };
+		4349750327846A9700C1B865 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349750227846A9700C1B865 /* Category.swift */; };
 		43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */; };
 		43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */; };
 		43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */; };
@@ -64,10 +66,12 @@
 		43147860275CAAD000764B7D /* TestWalletUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWalletUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4314786F275D0D9200764B7D /* CoreClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreClient.swift; sourceTree = "<group>"; };
 		43147878275D219800764B7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Wooppay Wallet/Wooppay Wallet/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
-		4314787A275D227F00764B7D /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4314787C275D2A3600764B7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		4323203D277B673200AF0645 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		4323203E277B673200AF0645 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		434974FD27843E3000C1B865 /* CoreDataHendler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHendler.swift; sourceTree = "<group>"; };
+		43497500278469FB00C1B865 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		4349750227846A9700C1B865 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
 		43A2E96E275E83EB009E2EA3 /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
 		43FF301A27668BFF00E31B5E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +154,14 @@
 			path = TestWalletUITests;
 			sourceTree = "<group>";
 		};
+		434974FF278469E200C1B865 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				43497500278469FB00C1B865 /* CategoryModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		43ED4ACF276060470066DC74 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,7 +197,6 @@
 		43ED4AD2276060DD0066DC74 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				4314787A275D227F00764B7D /* Service.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 		43ED4AD3276060FF0066DC74 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				434974FF278469E200C1B865 /* models */,
 				4314786F275D0D9200764B7D /* CoreClient.swift */,
 				43ED4AD2276060DD0066DC74 /* DTO */,
 			);
@@ -247,6 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				43147843275CAACF00764B7D /* TestWallet.xcdatamodeld */,
+				434974FD27843E3000C1B865 /* CoreDataHendler.swift */,
+				4349750227846A9700C1B865 /* Category.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -438,14 +452,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				43147845275CAACF00764B7D /* TestWallet.xcdatamodeld in Sources */,
+				43497501278469FB00C1B865 /* CategoryModel.swift in Sources */,
 				4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */,
 				4323203F277B673200AF0645 /* AuthViewController.swift in Sources */,
+				434974FE27843E3000C1B865 /* CoreDataHendler.swift in Sources */,
 				4314783F275CAACF00764B7D /* MainViewController.swift in Sources */,
 				4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */,
 				4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */,
 				43147870275D0D9200764B7D /* CoreClient.swift in Sources */,
+				4349750327846A9700C1B865 /* Category.swift in Sources */,
 				43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */,
-				4314787B275D227F00764B7D /* Service.swift in Sources */,
 				43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

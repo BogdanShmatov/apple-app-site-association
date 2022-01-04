@@ -10,10 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var textField: UITextField!
+    
     
     private var presenter: MainPresenter? = MainPresenter()
     
     var categories = [Category]()
+    var sortedCategories = [Category]()
     
     override func viewDidLoad() {
         
@@ -44,6 +47,13 @@ class ViewController: UIViewController {
         present(authViewController, animated: true, completion: nil)
         print("Btn Pay")
     }
+    @IBAction func editingDidEnd(_ sender: Any) {
+        var text = textField.text!
+        sortedCategories = categories.filter {
+            $0.title.contains(text)
+        }
+        categoryCollectionView.reloadData()
+    }
 }
 
 // MARK: - MainPresenterpOutput
@@ -51,6 +61,7 @@ extension ViewController: MainPresenterpOutput {
     
     func onSuccessCategories(data: [Category]) {
         categories = data
+        sortedCategories = categories
         categoryCollectionView.reloadData()
     }
     
@@ -60,14 +71,14 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
-        let category = categories[indexPath.row]
+        let category = sortedCategories[indexPath.row]
         cell.setupCell(category)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return sortedCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

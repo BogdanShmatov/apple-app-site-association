@@ -34,4 +34,12 @@ class SearchComponentView: UIView {
         
         return nib.instantiate(withOwner: self, options: nil).first! as! UIView
     }
+    
+    @IBAction func editingDidEnd(_ sender: Any) {
+//        print("gdhgd")
+    }
+}
+
+protocol SearchableProtocol {
+    
 }

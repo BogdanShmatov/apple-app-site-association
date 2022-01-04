@@ -45,17 +45,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7AX-19-JHA" customClass="SearchComponentView" customModule="TestWallet" customModuleProvider="target">
-                                <rect key="frame" x="23" y="225" width="368" height="51"/>
+                                <rect key="frame" x="24" y="222" width="366" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Все платежи " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yiu-Lh-7aF">
-                                <rect key="frame" x="24" y="312" width="366" height="20"/>
+                                <rect key="frame" x="24" y="269" width="366" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.45989251139999998" green="0.45996236800000001" blue="0.45987719300000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fNe-kc-cLM">
-                                <rect key="frame" x="24" y="340" width="366" height="453"/>
+                                <rect key="frame" x="24" y="297" width="366" height="496"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Xt8-MF-ETI">
                                     <size key="itemSize" width="327" height="402"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,32 +64,43 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-M8-qdJ">
+                                <rect key="frame" x="193" y="171" width="183" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingDidEnd:" destination="BYZ-38-t0r" eventType="editingChanged" id="U5V-sG-YjJ"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7AX-19-JHA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="12a-4m-DVV"/>
+                            <constraint firstItem="7AX-19-JHA" firstAttribute="top" secondItem="XQi-5t-6zp" secondAttribute="bottom" constant="13" id="0fc-o0-fvQ"/>
                             <constraint firstItem="fNe-kc-cLM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="29M-Jp-GF4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yiu-Lh-7aF" secondAttribute="trailing" constant="24" id="5wW-YI-TgB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAV-iU-pum" secondAttribute="trailing" constant="24" id="95E-OD-LT3"/>
                             <constraint firstItem="rN6-tS-e0q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="Adv-pc-Egd"/>
-                            <constraint firstItem="7AX-19-JHA" firstAttribute="top" secondItem="XQi-5t-6zp" secondAttribute="bottom" constant="16" id="DH9-ia-5As"/>
                             <constraint firstItem="rN6-tS-e0q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="FwJ-Ql-JDI"/>
                             <constraint firstItem="QsG-Y2-0d6" firstAttribute="top" secondItem="rN6-tS-e0q" secondAttribute="bottom" constant="4" id="GI4-pq-FpX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7AX-19-JHA" secondAttribute="trailing" constant="23" id="KxL-rj-1pk"/>
                             <constraint firstItem="XQi-5t-6zp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ov4-Df-YRD"/>
                             <constraint firstItem="fNe-kc-cLM" firstAttribute="top" secondItem="Yiu-Lh-7aF" secondAttribute="bottom" constant="8" id="VDd-F8-Ksx"/>
+                            <constraint firstItem="Yiu-Lh-7aF" firstAttribute="top" secondItem="7AX-19-JHA" secondAttribute="bottom" constant="13" id="a5R-S2-TrO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fNe-kc-cLM" secondAttribute="trailing" constant="24" id="cDK-Lk-fOx"/>
+                            <constraint firstItem="7AX-19-JHA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="kOc-mk-f1F"/>
                             <constraint firstItem="yAV-iU-pum" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="n9P-9M-t7R"/>
                             <constraint firstItem="QsG-Y2-0d6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="rkg-9Q-cHr"/>
                             <constraint firstItem="Yiu-Lh-7aF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="rsN-LA-EL9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fNe-kc-cLM" secondAttribute="bottom" constant="69" id="tX9-Bf-ohk"/>
-                            <constraint firstItem="Yiu-Lh-7aF" firstAttribute="top" secondItem="7AX-19-JHA" secondAttribute="bottom" constant="36" id="uXP-2m-ckQ"/>
                             <constraint firstItem="XQi-5t-6zp" firstAttribute="top" secondItem="QsG-Y2-0d6" secondAttribute="bottom" constant="16" id="ui5-IU-mB9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7AX-19-JHA" secondAttribute="trailing" constant="24" id="wiE-VM-zvV"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="categoryCollectionView" destination="fNe-kc-cLM" id="s2g-oo-y5e"/>
+                        <outlet property="textField" destination="Tfg-M8-qdJ" id="gKZ-9W-jhQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

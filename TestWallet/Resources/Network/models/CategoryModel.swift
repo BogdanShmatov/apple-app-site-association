@@ -11,7 +11,7 @@ struct CategoryModel: Decodable {
     let id: Int64
     let title: String
     
-    static let coreData = CoreDataHendler()
+    static let coreData = CoreDataHandler()
     
     func store() {
         guard let category = CategoryModel.coreData.add(Category.self) else {return}

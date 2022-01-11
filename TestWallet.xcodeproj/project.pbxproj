@@ -22,7 +22,7 @@
 		4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314787C275D2A3600764B7D /* MainPresenter.swift */; };
 		4323203F277B673200AF0645 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4323203D277B673200AF0645 /* AuthViewController.swift */; };
 		43232040277B673200AF0645 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4323203E277B673200AF0645 /* AuthViewController.xib */; };
-		434974FE27843E3000C1B865 /* CoreDataHendler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434974FD27843E3000C1B865 /* CoreDataHendler.swift */; };
+		434974FE27843E3000C1B865 /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434974FD27843E3000C1B865 /* CoreDataHandler.swift */; };
 		43497501278469FB00C1B865 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43497500278469FB00C1B865 /* CategoryModel.swift */; };
 		4349750327846A9700C1B865 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4349750227846A9700C1B865 /* Category.swift */; };
 		43A2E96D275E8218009E2EA3 /* SearchComponentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */; };
@@ -69,7 +69,7 @@
 		4314787C275D2A3600764B7D /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		4323203D277B673200AF0645 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		4323203E277B673200AF0645 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
-		434974FD27843E3000C1B865 /* CoreDataHendler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHendler.swift; sourceTree = "<group>"; };
+		434974FD27843E3000C1B865 /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
 		43497500278469FB00C1B865 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		4349750227846A9700C1B865 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		43A2E96C275E8218009E2EA3 /* SearchComponentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchComponentView.xib; sourceTree = "<group>"; };
@@ -259,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				43147843275CAACF00764B7D /* TestWallet.xcdatamodeld */,
-				434974FD27843E3000C1B865 /* CoreDataHendler.swift */,
+				434974FD27843E3000C1B865 /* CoreDataHandler.swift */,
 				4349750227846A9700C1B865 /* Category.swift */,
 			);
 			path = DataBase;
@@ -455,7 +455,7 @@
 				43497501278469FB00C1B865 /* CategoryModel.swift in Sources */,
 				4314787D275D2A3600764B7D /* MainPresenter.swift in Sources */,
 				4323203F277B673200AF0645 /* AuthViewController.swift in Sources */,
-				434974FE27843E3000C1B865 /* CoreDataHendler.swift in Sources */,
+				434974FE27843E3000C1B865 /* CoreDataHandler.swift in Sources */,
 				4314783F275CAACF00764B7D /* MainViewController.swift in Sources */,
 				4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */,
 				4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */,

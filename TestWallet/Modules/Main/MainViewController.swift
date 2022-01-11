@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-    @IBOutlet weak var textField: UITextField!
     
+    @IBOutlet weak var wpSearField: SearchComponentView!
     
     private var presenter: MainPresenter? = MainPresenter()
     
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
         presenter?.output = self
         presenter?.getCategories()
         
+        wpSearField.textField.delegate = self
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -40,19 +41,26 @@ class ViewController: UIViewController {
         categoryCollectionView.delegate = self
         
     }
-
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let text = textField.text, text != "" {
+            sortedCategories = categories.filter {
+                $0.title.contains(text)
+            }
+        } else {
+            sortedCategories = categories
+        }
+        categoryCollectionView.reloadData()
+        
+        return true
+    }
+     
     
     @IBAction func touchButtonGetServises(_ sender: Any) {
         let authViewController = AuthViewController()
         present(authViewController, animated: true, completion: nil)
         print("Btn Pay")
-    }
-    @IBAction func editingDidEnd(_ sender: Any) {
-        var text = textField.text!
-        sortedCategories = categories.filter {
-            $0.title.contains(text)
-        }
-        categoryCollectionView.reloadData()
     }
 }
 

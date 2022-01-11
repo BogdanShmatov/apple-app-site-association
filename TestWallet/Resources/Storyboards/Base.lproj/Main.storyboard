@@ -64,16 +64,6 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-M8-qdJ">
-                                <rect key="frame" x="193" y="171" width="183" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="editingDidEnd:" destination="BYZ-38-t0r" eventType="editingChanged" id="U5V-sG-YjJ"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,7 +90,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryCollectionView" destination="fNe-kc-cLM" id="s2g-oo-y5e"/>
-                        <outlet property="textField" destination="Tfg-M8-qdJ" id="gKZ-9W-jhQ"/>
+                        <outlet property="wpSearField" destination="7AX-19-JHA" id="LYF-sE-rKD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

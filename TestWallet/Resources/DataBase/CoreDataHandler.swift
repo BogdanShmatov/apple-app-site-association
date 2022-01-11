@@ -1,5 +1,5 @@
 //
-//  CoreDataHendler.swift
+//  CoreDataHandler.swift
 //  TestWallet
 //
 //  Created by Bogdan on 04.01.2022.
@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class CoreDataHendler {
+class CoreDataHandler {
     private let viewContext: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     func add<T: NSManagedObject>(_ type: T.Type) -> T? {

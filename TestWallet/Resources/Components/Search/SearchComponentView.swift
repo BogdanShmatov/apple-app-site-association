@@ -10,6 +10,8 @@ import UIKit
 @IBDesignable
 class SearchComponentView: UIView {
     
+    @IBOutlet weak var textField: UITextField!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -21,15 +23,17 @@ class SearchComponentView: UIView {
     }
     
     private func setupViews() {
+        
         let xibView = loadViewFromXib()
         xibView.frame = self.bounds
         xibView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
         self.addSubview(xibView)
     }
     
     private func loadViewFromXib() -> UIView {
-        let bundle = Bundle(for:  type(of: self))
         
+        let bundle = Bundle(for:  type(of: self))
         let nib = UINib(nibName: "SearchComponentView", bundle: bundle)
         
         return nib.instantiate(withOwner: self, options: nil).first! as! UIView

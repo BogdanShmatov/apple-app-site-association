@@ -18,7 +18,7 @@ protocol MainPresenterpOutput: AnyObject {
 final class MainPresenter {
     
     fileprivate let requestManager = CoreClient()
-    fileprivate let coreData = CoreDataHendler()
+    fileprivate let coreData = CoreDataHandler()
     
     weak var output: MainPresenterpOutput?
 }

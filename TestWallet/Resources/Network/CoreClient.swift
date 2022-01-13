@@ -25,7 +25,7 @@ final class CoreClient {
     }
     
     private func loadCategories(_ success: @escaping CoreResponse) {
-        let request = AF.request(Urls.base + "/service", method: .get)
+        let request = AF.request(Urls.base + "/service-category", method: .get)
             request.responseDecodable(of: [CategoryModel].self) { response in
                 if let response = response.value  {
                     response.forEach{$0.store()}

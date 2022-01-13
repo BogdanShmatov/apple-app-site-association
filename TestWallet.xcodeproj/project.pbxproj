@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4150D6FB6D4851C5F7B0650C /* libPods-TestWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06C351747040B4FABE67C1B6 /* libPods-TestWallet.a */; };
+		4300ACEF278DE9F4003C924D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4300ACEE278DE9F4003C924D /* CategoriesViewController.swift */; };
 		4314783B275CAACF00764B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783A275CAACF00764B7D /* AppDelegate.swift */; };
 		4314783D275CAACF00764B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783C275CAACF00764B7D /* SceneDelegate.swift */; };
 		4314783F275CAACF00764B7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4314783E275CAACF00764B7D /* MainViewController.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		06C351747040B4FABE67C1B6 /* libPods-TestWallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestWallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C75A50101AC8B4DF178181 /* Pods-TestWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestWallet.debug.xcconfig"; path = "Target Support Files/Pods-TestWallet/Pods-TestWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		4300ACEE278DE9F4003C924D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		43147837275CAACF00764B7D /* TestWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4314783A275CAACF00764B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4314783C275CAACF00764B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				4314783E275CAACF00764B7D /* MainViewController.swift */,
 				4314787C275D2A3600764B7D /* MainPresenter.swift */,
 				4323203D277B673200AF0645 /* AuthViewController.swift */,
+				4300ACEE278DE9F4003C924D /* CategoriesViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				4349750327846A9700C1B865 /* Category.swift in Sources */,
 				43FF301C27668BFF00E31B5E /* CategoryCollectionViewCell.swift in Sources */,
 				43A2E96F275E83EB009E2EA3 /* SearchComponentView.swift in Sources */,
+				4300ACEF278DE9F4003C924D /* CategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +654,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,6 +684,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

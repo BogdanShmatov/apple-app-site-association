@@ -20,4 +20,12 @@ class AuthViewController: UIViewController {
 
         present(secondVC, animated: true, completion: nil)
     }
+    @IBAction func closeController(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    @IBAction func sohwNewController(_ sender: Any) {
+        let main = CategoriesViewController()
+        
+        navigationController?.pushViewController(main, animated: true)
+    }
 }

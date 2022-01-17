@@ -12,70 +12,94 @@ class CategoriesViewController: UIViewController {
 
     private var presenter: MainPresenter? = MainPresenter()
     
-    var categoryCollectionView: UICollectionView!
+    var categoryCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: 327, height: 60)
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
+        
+        return collectionView
+    }()
+    
     var categories = [Category]()
     var sortedCategories = [Category]()
+    
+    var qrButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(red: 0.11, green: 0.514, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 20
+        button.setImage(UIImage(named: "qr"), for: .normal)
+        button.tintColor = .white
+        
+        return button
+    }()
+    
+    var paymentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Оплата"
+        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        
+        return label
+    }()
+    
+    var paymentsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Платежи"
+        label.textColor = UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 16)
+        
+        return label
+    }()
+    
+    var paymentsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = UIColor(red: 0.11, green: 0.514, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 25
+        button.setTitle("Платежи", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        button.tintColor = .white
+        
+        return button
+    }()
+    
+    var searchField: UITextField = {
+        let field = UITextField()
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: field.frame.height))
+        field.leftView = paddingView
+        field.leftViewMode = UITextField.ViewMode.always
+        
+        field.placeholder = "Поиск по кошельку..."
+        field.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        field.textColor = UIColor(red: 0.688, green: 0.688, blue: 0.688, alpha: 1)
+        field.backgroundColor = UIColor(red: 0.958, green: 0.958, blue: 0.958, alpha: 1)
+        field.layer.cornerRadius = 12
+        
+        return field
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        setupView()
+        
     }
     
     private func configure() {
         presenter?.output = self
         presenter?.getCategories()
         
-        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        let qrButton = UIButton(type: .system)
-        qrButton.backgroundColor = UIColor(red: 0.11, green: 0.514, blue: 1, alpha: 1)
-        qrButton.layer.cornerRadius = 20
-        qrButton.setImage(UIImage(named: "qr"), for: .normal)
-        qrButton.tintColor = .white
-  
-        let paymentLabel = UILabel()
-        paymentLabel.text = "Оплата"
-        paymentLabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        paymentLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        
-        let paymentsLabel = UILabel()
-        paymentsLabel.text = "Платежи"
-        paymentsLabel.textColor = UIColor(red: 0.459, green: 0.459, blue: 0.459, alpha: 1)
-        paymentsLabel.font = UIFont.systemFont(ofSize: 16)
-        
-        let paymentsButton = UIButton(type: .system)
-        paymentsButton.backgroundColor = UIColor(red: 0.11, green: 0.514, blue: 1, alpha: 1)
-        paymentsButton.layer.cornerRadius = 25
-        paymentsButton.setTitle("Платежи", for: .normal)
-        paymentsButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        paymentsButton.tintColor = .white
-        
-        
-        let searchField = UITextField()
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: searchField.frame.height))
-        searchField.leftView = paddingView
-        searchField.leftViewMode = UITextField.ViewMode.always
-        
-        searchField.placeholder = "Поиск по кошельку..."
-        searchField.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        searchField.textColor = UIColor(red: 0.688, green: 0.688, blue: 0.688, alpha: 1)
-        searchField.backgroundColor = UIColor(red: 0.958, green: 0.958, blue: 0.958, alpha: 1)
-        searchField.layer.cornerRadius = 12
         searchField.delegate = self
-        
-       
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 327, height: 60)
-        
-        
-        categoryCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        categoryCollectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         categoryCollectionView.dataSource = self
         categoryCollectionView.delegate = self
-        
-       
-        
+    
+    }
+    
+    private func setupView() {
+        view.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+
         view.addSubview(qrButton)
         qrButton.snp.makeConstraints { make in
             make.right.equalToSuperview().inset(24)
@@ -135,7 +159,9 @@ extension CategoriesViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
+//        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
+        let authViewController = AuthViewController()
+        navigationController?.pushViewController(authViewController, animated: true)
     }
 }
 
@@ -144,7 +170,7 @@ extension CategoriesViewController: MainPresenterpOutput, UITextFieldDelegate {
     func onSuccessCategories(data: [Category]) {
         categories = data
         sortedCategories = categories
-        self.categoryCollectionView?.reloadData()
+        self.categoryCollectionView.reloadData()
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

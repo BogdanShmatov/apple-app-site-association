@@ -1,0 +1,15 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "C5G3U6QFZR.com.wooppay.wooppay",
+                "paths": ["*"]
+            },
+            {
+                "appID": "C5G3U6QFZR.com.wooppay.wooppay-debug",
+                "paths": ["*"]
+            }
+        ]
+    }
+}
